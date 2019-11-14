@@ -1,16 +1,21 @@
 <?php 
  include('config/db_connect.php');
  
-	$player_name = $jearsy_no = $team_name = $dob = $player_phone = $queryerror = '';
-	$errors = array('player_name' => '', 'jearsy_no' => '', 'team_name' => '', 'dob' => '', 'player_phone' => '');
+	$player_fname = $player_lname = $jearsy_no = $team_name = $dob = $player_phone = $queryerror = '';
+	$errors = array('player_fname' => '','player_lname' => '', 'jearsy_no' => '', 'team_name' => '', 'dob' => '', 'player_phone' => '');
 	
 	if(isset($_POST['submit'])){
 		
 		// check player_name
-		if(empty($_POST['player_name'])){
-			$errors['player_name'] = 'Player Name is required';
+		if(empty($_POST['player_fname'])){
+			$errors['player_fname'] = 'Player First Name is required';
 		} else{
-			$player_name = $_POST['player_name'];
+			$player_fname = $_POST['player_fname'];
+		}
+		if(empty($_POST['player_lname'])){
+			$errors['player_lname'] = 'Player Last Name is required';
+		} else{
+			$player_lname = $_POST['player_lname'];
 		}
 		// chek jearsy no 
 		if(empty($_POST['jearsy_no'])){
@@ -42,23 +47,20 @@
 			//echo 'errors in form';
 		} else {
 		// escape sql chars
-		$player_name = mysqli_real_escape_string($conn, $_POST['player_name']);
+		$player_fname = mysqli_real_escape_string($conn, $_POST['player_fname']);
+		$player_lname = mysqli_real_escape_string($conn, $_POST['player_lname']);
 		$jearsy_no = mysqli_real_escape_string($conn, $_POST['jearsy_no']);
 		$team_name = mysqli_real_escape_string($conn, $_POST['team_name']);
 		$dob = mysqli_real_escape_string($conn, $_POST['dob']);
 		$player_phone = mysqli_real_escape_string($conn, $_POST['player_phone']);
 		
 		// create sql
-		$sql = "INSERT INTO player(player_name,jearsy_no,team_name,dob,player_phone) VALUES('$player_name','$jearsy_no','$team_name','$dob','$player_phone')";
+		$sql = "INSERT INTO player(player_fname,player_lname,jearsy_no,team_name,dob,player_phone) VALUES('$player_fname','$player_lname','$jearsy_no','$team_name','$dob','$player_phone')";
 		//save to db and check
 		if(mysqli_query($conn, $sql)){
 			// success
-			header('Location: playerdetail.php'); 
- ?>
-
-        <script type="text/javascript">popUp("Player Added!!!!")</script>
-
-<?php	} else {
+			header('Location: playerdetail.php');
+		} else {
 			$queryerror = mysqli_error($conn);
 		}
 	} // end POST check
@@ -77,10 +79,15 @@
   <div class="row">
     <form class="col s12" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
     	<div class="row">
-        <div class="input-field col s12">
-          <input placeholder="Enter Player Name" id="player_name" name="player_name" type="text" class="validate">
-          <label for="player_name">Player Name</label>
-          <div class="red-text"><?php echo $errors['player_name']; ?></div>
+        <div class="input-field col s6">
+          <input placeholder="Enter Player First Name" id="player_fname" name="player_fname" type="text" class="validate">
+          <label for="player_fname">Player Fname</label>
+          <div class="red-text"><?php echo $errors['player_fname']; ?></div>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="Enter Player Last Name" id="player_lname" name="player_lname" type="text" class="validate">
+          <label for="player_lname">Player Lname</label>
+          <div class="red-text"><?php echo $errors['player_lname']; ?></div>
         </div>
       </div>
       <div class="row">
