@@ -1,7 +1,7 @@
 <?php 
    // MySQLi or PDO 
    // connect to database
-	$conn = mysqli_connect('localhost','userTest', 'testuser', 'cricket-mgmt');
+	$conn = mysqli_connect('localhost','root', '', 'cricket-corp');
 	// check connection
 	if(!$conn) {
 		echo 'Connection Failed <br/>' .mysqli_connect_error();
