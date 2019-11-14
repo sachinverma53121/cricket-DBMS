@@ -1,12 +1,14 @@
 # cricket-DBMS
-It is a project to implement DBMS using mySQL and PHP
--> We can register teams
--> Add players to registered teams
--> Fix matches between registered Teams
--> And view all these information stored in our Database using admin login
+**It is a project to implement DBMS using mySQL and PHP**
+```
+> We can register teams
+> Add players to registered teams
+> Fix matches between registered Teams
+> And view all these information stored in our Database using admin login
+```
 
-//create following database and run these files on your localhost server
-
+**create following database and run these files on your localhost server**
+```
 CREATE TABLE admin (
     admin_email VARCHAR(255) NOT NULL,
     admin_name VARCHAR(255) NOT NULL,
@@ -74,8 +76,9 @@ CREATE TABLE teammatch (
     FOREIGN KEY(match_no)REFERENCES maatchh(match_no),
     FOREIGN KEY(team_name) REFERENCES team(team_name) 
 );
-
-
+```
+*You can use Xampp / Wampp to run LocalHost on your syatem and start these files
+and start creating database in your system*
 
 
 
