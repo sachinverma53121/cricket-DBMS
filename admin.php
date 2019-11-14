@@ -1,7 +1,7 @@
 <?php 
  include('config/db_connect.php');
-    $queryerror = '';
-    // write query for getting admin details
+  $queryerror = '';
+  // write query for getting admin details
 	$sql = 'SELECT username, password FROM admin';
 
 	// make query and get result
@@ -39,7 +39,7 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" name="password" type="text" class="validate">
+          <input id="password" name="password" type="password" class="validate">
           <label for="password">Password</label>
         </div>
       </div>
