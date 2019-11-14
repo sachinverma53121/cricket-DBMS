@@ -9,6 +9,8 @@
 
 **create following database and run these files on your localhost server**
 ```
+DATABASE NAME -> crick-corp
+
 CREATE TABLE admin (
     admin_email VARCHAR(255) NOT NULL,
     admin_name VARCHAR(255) NOT NULL,
@@ -77,7 +79,7 @@ CREATE TABLE teammatch (
     FOREIGN KEY(team_name) REFERENCES team(team_name) 
 );
 ```
-*You can use Xampp / Wampp to run LocalHost on your syatem and start these files
+*You can use Xampp / Wampp to run LocalHost on your system and start these files
 and start creating database in your system*
 
 
