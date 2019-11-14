@@ -27,6 +27,7 @@
 		<ul class="right hide-on-med-and-down">
 		  <li><a href="index.php">Home</a></li>
 		  <li><a href="registerteam.php">Reg. Team</a></li>
+		  <li><a href="playerdetail.php">Player Details</a></li>
 		  <li><a href="fixamatch.php">Fix Match</a></li>
 		  <li><a href="admin.php" data-tooltip="Admin Login" class="btn-floating blue-grey lighten-1 tooltipped z-depth-0">
 		  	<i class="material-icons">supervised_user_circle</i>
@@ -37,7 +38,8 @@
 	</nav>
 	<ul class="sidenav blue-grey darken-2" id="mobile-links">
 	  <li><a href="index.php" class="white-text">Home</a></li>
-		  <li><a href="registerteam.php" class="white-text">Reg. Team</a></li>
+		  <li><a href="registerteam.php" class="white-text">Register Team</a></li>
+		  <li><a href="playerdetail.php" class="white-text">Player Details</a></li>
 		  <li><a href="fixamatch.php" class="white-text">Fix Match</a></li>
 	  <li><a href="admin.php" class="white-text">Admin Login</a></li>
 	</ul>
