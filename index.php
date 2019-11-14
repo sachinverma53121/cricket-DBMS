@@ -41,7 +41,7 @@
 	  	   <div class="card-content">
 	  		 <span class="card-title brown-text">Register Team</span>
 	  		 <blockquote>
-	  		  Superior Leaders Are Willing To Admit A Mistake And Cut Their Losses. Be Willing To Admit That You’ve Changed Your Mind. Don’t Persist When The Original Decision Turns Out To Be A Poor One.
+	  		  Superior Leaders Are Willing To Admit A Mistake And Cut Their Losses.
 	  		 </blockquote> 
 	  	   </div>
 	  	   <div class="card-action">
@@ -60,7 +60,7 @@
 	  	   <div class="card-content">
 	  		 <span class="card-title brown-text">Fix a Match</span>
 	  		 <blockquote>
-	  		  Superior Leaders Are Willing To Admit A Mistake And Cut Their Losses. Be Willing To Admit That You’ve Changed Your Mind. Don’t Persist When The Original Decision Turns Out To Be A Poor One.
+	  		  Superior Leaders Are Willing To Admit A Mistake And Cut Their Losses.
 	  		 </blockquote>
 	  	   </div>
 	  	   <div class="card-action">
