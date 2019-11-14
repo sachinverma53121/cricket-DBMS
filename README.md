@@ -9,7 +9,7 @@
 
 **create following database and run these files on your localhost server**
 ```
-DATABASE NAME -> crick-corp
+DATABASE NAME -> cricket-corp
 
 CREATE TABLE admin (
     admin_email VARCHAR(255) NOT NULL,
