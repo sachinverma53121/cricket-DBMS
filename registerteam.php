@@ -1,7 +1,7 @@
 <?php 
  include('config/db_connect.php');
 
-	$team_name = $country_name = $country_code = $manager_phone = $manager_name = $coach_name = $coach_id = $queryerror1 = $queryerror2 = $queryerror3 = $queryerror4 = '';
+	$team_name = $country_name = $country_code = $manager_phone = $manager_name = $coach_name = $coach_id = $queryerror1 = $queryerror2 = $queryerror3 = $queryerror4 = $queryerror5 = $queryerror6 = '';
 	$errors = array('team_name' => '', 'country_name' => '', 'country_code' => '', 'manager_name' => '', 'manager_phone' => '', 'coach_name' => '', 'coach_id' => '');
 	
 	if(isset($_POST['submit'])){
@@ -67,13 +67,15 @@
 			 	$sql_team = "INSERT INTO team(team_name,country_code) VALUES('$team_name','$country_code')";
 			 	if(mysqli_query($conn, $sql_team)){
 					// success
-				 	$sql_manager = "INSERT INTO manager(manager_name,manager_phone,team_name) VALUES('$manager_name','$manager_phone','$team_name')";	
+				 	$sql_manager = "INSERT INTO manager(manager_name,team_name) VALUES('$manager_name','$team_name')";	
 				 	if(mysqli_query($conn, $sql_manager)){
 						// success
+						$sql_manager = "INSERT INTO managerphone(manager_name,manager_phone) VALUES('$manager_name','$manager_phone')";
+						if(mysqli_query($conn,$sql_manager)){
+
 					 	$sql_coach = "INSERT INTO coach(coach_id,coach_name,team_name) VALUES('$coach_id','$coach_name','$team_name')";
 					 	if(mysqli_query($conn, $sql_coach)){
 							// success
-							header('Location: registerteam.php');
 						 } else {
 						 	$queryerror1 = mysqli_error($conn);
 						 }
@@ -89,6 +91,9 @@
 			 } else {
 			 	$queryerror4 = mysqli_error($conn);
 			 }
+			} else {
+			 	$queryerror6 = mysqli_error($conn);
+			 } 
 	} // end POST check
  }
 
@@ -146,8 +151,8 @@
         </div>
       </div>
       <div class="container">
-      	<div class="red-text"><?php echo $queryerror1; echo $queryerror2; echo $queryerror3; echo $queryerror4; ?></div>
-		<input type="submit" name="submit" value="Submit" class="btn brown z-depth-1">
+      	<div class="red-text"><?php echo $queryerror1; echo $queryerror2; echo $queryerror3; echo $queryerror4; echo $queryerror5; echo $queryerror6; ?></div>
+		<input type="submit" name="submit" value="Register" class="btn brown z-depth-1">
 		<span class="right"><a class="btn brown z-depth-1" href="playerdetail.php">Enter Team Players Details</a></span> 
 	  </div>
     </form>
