@@ -41,7 +41,8 @@
 	  	   <div class="card-content">
 	  		 <span class="card-title brown-text">Register Team</span>
 	  		 <blockquote>
-	  		  Superior Leaders Are Willing To Admit A Mistake And Cut Their Losses.
+	  		  Register Your Team To Participate in Tournament <br>
+	  		  Enter you Country, Manager and Coach Details
 	  		 </blockquote> 
 	  	   </div>
 	  	   <div class="card-action">
@@ -60,7 +61,8 @@
 	  	   <div class="card-content">
 	  		 <span class="card-title brown-text">Fix a Match</span>
 	  		 <blockquote>
-	  		  Superior Leaders Are Willing To Admit A Mistake And Cut Their Losses.
+	  		  Fix matches between two teams in a tournament <br>
+	  		  Enter team and venue details
 	  		 </blockquote>
 	  	   </div>
 	  	   <div class="card-action">
