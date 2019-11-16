@@ -105,7 +105,7 @@
       <div class="row">
         <div class="input-field col s6">
           <input id="dob" name="dob" type="date" class="validate datepicker">
-          <label for="dob">DOB</label>
+          <label for="dob">DOB (1980-1999)</label>
           <div class="red-text"><?php echo $errors['dob']; ?></div>
         </div>
         <div class="input-field col s6">
