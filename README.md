@@ -79,8 +79,7 @@ CREATE TABLE teammatch (
     FOREIGN KEY(team_name) REFERENCES team(team_name) 
 );
 ```
-*You can use Xampp / Wampp to run LocalHost on your system and start these files
-and start creating database in your system*
+*You can use Xampp / Wampp to run them locally on your system and start creating database in your system*
 
 
 
